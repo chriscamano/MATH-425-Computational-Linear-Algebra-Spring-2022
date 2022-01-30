@@ -1,0 +1,83 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat=1.7}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH425 Lecture 2}
+\date{1/27/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+
+\begin{document}
+\maketitle
+\section{The field}\\
+A field $\mathbb{F}$ is a set containing at least two distinct elements, an additive identity or \{0\}. And a multiplicative Identity \{1\}, and the elements of the set that satisfy the following properties \\\\
+\section{Properties of a Field}
+$$
+  \text{Commutativity:  } \alpha + \beta = \beta + \alpha\qquad  \forall \alpha\beta \in \mathbb{F} $$
+  \\
+  $$\text{Associativity:  } \alpha + (\beta+\lambda) = ()\alpha + \beta)+\lambda\qquad (\alpha\beta)\lambda=\alpha(\beta\lambda)\qquad \forall \alpha\beta \in \mathbb{F} $$
+  \\
+  $$\text{Identities:} \lambda + 0 = \lambda \text{ and } \lambda(1)=\lambda \quad \forall \lambda \in \mathbb{F}$$
+  \\
+  $$\text{Additive inverse: } \forall \alpha \in \mathbb{F} \exists \beta \in \mathbb{F} \text{ such that } \alpha + \beta=0$$
+  \\
+  $$\text{Multiplicative inverse:} \forall \alpha \in \mathbb{F} \text{ with} \alpha \neq 0,\exists \beta \in \mathbb{F} \text{ such that } \alpha\beta=1$$
+  \\
+  $$\text{Distributive property} \lambda(\alpha+\beta)=\lambda\alpha +\lambda\beta \quad \forall \lambda,\alpha,\beta \in \mathbb{F}
+$$
+\\
+\textbf{Examples of Fields}\\
+$\mathbb{R}$ set of real numbers\\
+GF(2): Galois field of order 2. finite field: integers modulo 2 = \{0,2\}
+\\\\
+\textbf{Characteristics of GF2}\\
+Since GF2 has two elemets it forms a 2 dimensions matri for addition with zeros on the principal diagonal and 1s on the other indicies.\\
+\[
+ \begin{bmatrix}
+0 & 1 \\
+1 & 0
+\end{bmatrix}
+\]
+Multiplication for GF(2) also forms a 2x2 matrix as again, there are only two elements.
+$$ \begin{bmatrix}
+0 & 0 \\
+0 & 1
+\end{bmatrix}  $$
+In GF(2) you take the modulous of anything larger than 2 becuase the set in constrained to two elements. \\
+
+\section{Re-Introduction to Complex Numbers}\\
+The complex plane is a field that consists of the set of complex numbers.
+\\
+\[
+  \mathbb{C}=\{a+bi, a,b \in \mathbb{R}\}
+\]
+Where i= $\sqrt{-1}$. \\
+In python j is used in place of i as a fragement of applications in electrical engineering.
+
+\[
+  z=a+bi= Re(z)+iIm(z)
+\]
+\begin{align*}
+  \text{Re(z)=a, Im(z)=b}
+\end{align*}
+
+
+\end{document}
