@@ -1,0 +1,59 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat = newest}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH425 Lecture 2 }
+\date{2/1/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\newcommand{\q}{\quadd}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\begin{document}
+\maketitle
+
+\section{Complex numbers - Plotting}\\
+imaginary numbers can be plotted on an extension of $\mathbb{R}$ analagous to the cartesian plane in which an imaginary axis extends out from $\mathbb{R}$. \\\\
+Complex numbers can also be plotted using polar coordinates with the length of r as the absolute value of some complex number Z\\
+\[
+  r=|z|=\sqrt{x^2+y^2}
+\]
+Also represented as :
+\begin{align*}
+  z=x+iy=r(cos(\theta)+isin(\theta))=re^{i\theta}
+\end{align*}
+\\\\
+\subsection{Example}\\
+Convert 1+i to a polar form\\
+Convert $z=e^{i\pi/2}$to z=a+bi\\
+Find e^{\pi i}+1
+
+\begin{align*}
+  1+i=\sqrt{2}e^{i\pi /4}=(\sqrt{2},\frac{\pi}{4})\\
+  z=e^{i\pi/2}=cos(\frac{\pi}{2})+sin(\frac{\pi}{2})i\\
+  e^{\pi i}+1=0
+\end{align*}
+\section{Rotating a complex numbers by $\tau$ radians}\\
+Let f be the function that rotates $z=re^{i\theta}$ by $\tau$ counter clockwise. \\
+\[
+  f(z)= re^{i(\theta+\tau)}=ze^{i\tau}
+\]
+\end{document}
