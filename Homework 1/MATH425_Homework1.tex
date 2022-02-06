@@ -1,0 +1,251 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat = newest}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH425 Homework 1}
+\date{2/5/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\newcommand{\q}{\quadd}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\begin{document}
+\maketitle
+\section{Problem 1:}
+Solve the following system:
+\begin{align*}
+  u + v + w = -2\\
+  3u + 3v - w = 6\\
+  u - v + w =-1
+\end{align*}
+expressed as an augmented matrix this system of linear equations is:
+\[
+ \begin{bmatrix}
+1 & 1 & 1 & -2 \\
+3 & 3 & -1 & 6 \\
+1 & -1 & 1 & -1
+\end{bmatrix}
+\]
+the following matrix when reduced to row echelon form reveals the solution to the system of linear equations.
+\begin{align*}
+  \begin{bmatrix}
+ 1 & 1 & 1 & -2 \\
+ 3 & 3 & -1 & 6 \\
+ 1 & -1 & 1 & -1
+ \end{bmatrix} \sim
+  \begin{bmatrix}
+1 & 0 & 0 & \frac{3}{2} \\
+0 & 1 & 0 & -\frac{1}{2} \\
+0 & 0 & 1 & -3
+\end{bmatrix}
+\end{align*}
+implying that the solution to the system is that:
+\begin{align*}
+  u=\frac{3}{2}\\
+    v=-\frac{1}{2}\\
+   w=-3
+\end{align*}
+\section{Problem 2:}\\
+Choose h and k such that the system below has (a) no solution, (b) a unique solution,
+and (c) many solutions. Give separate answers for each part.
+\begin{align*}
+  x_1 + 3x_2 = 2\\
+3x_1 + hx_2 = k\\
+\begin{bmatrix}
+1 & 3 & 2 \\
+3 & h & k \\
+\end{bmatrix}
+\end{align*}
+\begin{enumerate}[label=(\alph*)]
+\item No  solutions:
+\begin{align*}
+  \textbf{R2=-3R1+R2}\\
+  \begin{bmatrix}
+  1 & 3 & 2 \\
+  3 & h & k \\
+  \end{bmatrix}  =
+  \begin{bmatrix}
+  1 & 3 & 2 \\
+  0 & h-9 & k-6 \\
+  \end{bmatrix}
+\end{align*}
+Thus the system is inconsistent when $\textbf{h=9}$ and $k \neq 6$
+\item A unique solution
+\begin{center}
+  by the logic of the reduction in part a the system is consistent for all values of h not equal to 9 as there will be a pivot in row 2 if this is the case.
+\end{center}
+\item Infinite solutions
+\begin{center}
+  By the logic of the reduction in part a the system is consistent with Infinite solutions when h=9 and k =6.
+\end{center}
+\end{enumerate}
+
+\section{Problem 3:}\\
+Consider the system below:
+\begin{align*}
+  4x_1 + x_2 + 3x_3 = 9\\
+  x_1 - 7x_2 - 2x_3 = 12\\
+  8x_1 + 6x_2 - 5x_3 =  15\\
+  \begin{bmatrix}
+ 4 & 1 & 3 & 9 \\
+ 1 & -7 & -2 & 12 \\
+ 8 & 6 & -5 & 15
+ \end{bmatrix}
+\end{align*}
+  \begin{enumerate}[label=(\alph*)]
+    \item  Column-space view: Find the vectors $v_1,v_2,v_3$and write the system as a vector equation:
+      \begin{align*}
+        x_1v_1+x_2v_2+x_3v_3=
+         \begin{bmatrix}
+          9 \\
+          12 \\
+          15
+        \end{bmatrix}\\
+        x_1
+        \begin{bmatrix}
+         1 \\
+         -7 \\
+         6
+       \end{bmatrix}
+       +x_2
+       \begin{bmatrix}
+        3 \\
+        -2 \\
+        -5
+      \end{bmatrix}
+      +x_3\begin{bmatrix}
+       3 \\
+       -2 \\
+       -5
+     \end{bmatrix}
+     =
+      \begin{bmatrix}
+       9 \\
+       12 \\
+       15
+     \end{bmatrix}\\
+ \end{align*}
+ \item Row-space view: Find the vectors $w_1,w_2,w_3$ and x such that the system is equivalent to:
+     \begin{align*}
+       w_1\cdot x=  9\\
+       w_2 \cdot x=  12\\
+       w_3\cdot x=  15
+     \end{align*}
+     \begin{align*}
+       w_1 = [4 , 1 , 3]\\
+       w_2 = [1 , -7 , -2]\\
+       w_3 = [8 , 6 , -5]
+     \end{align*}
+     \begin{align*}
+      [4 , 1 , 3] \cdot
+      \begin{bmatrix}
+       x_1 \\
+       x_2 \\
+       x_2
+     \end{bmatrix}=9 \\
+      [1 , -7 , -2] \cdot
+      \begin{bmatrix}
+       x_1 \\
+       x_2 \\
+       x_2
+     \end{bmatrix}=12\\
+      [8 , 6 , -5]\cdot
+      \begin{bmatrix}
+       x_1 \\
+       x_2 \\
+       x_2
+     \end{bmatrix}=15
+     \end{align*}
+    Let x be the following solution to the system to validate this claim. Solution obtained using row operations.
+    \renewcommand\arraystretch{2}
+    $\begin{bmatrix}
+     \frac{328}{121}\\
+     \frac{-14}{11}\\
+     \frac{-23}{121}
+    \end{bmatrix}$
+    \begin{align*}
+     [4 , 1 , 3] \cdot
+     \begin{bmatrix}
+      \frac{328}{121}\\
+      \frac{-14}{11}\\
+      \frac{-23}{121}
+     \end{bmatrix}=9 \\
+     [1 , -7 , -2] \cdot
+     \begin{bmatrix}
+      \frac{328}{121}\\
+      \frac{-14}{11}\\
+      \frac{-23}{121}
+     \end{bmatrix}=12\\
+     [8 , 6 , -5]\cdot
+     \begin{bmatrix}
+      \frac{328}{121}\\
+      \frac{-14}{11}\\
+      \frac{-23}{121}
+     \end{bmatrix}=15
+    \end{align*}
+\end{enumerate}
+\section{Problem 4: }
+Determine if $\textbf{b}$ is a linear combination of the vectors formed from the columns of the matrix $\textbf{A}$ .
+\begin{align*}
+  \textbf{A}=
+    \begin{bmatrix}
+   1 & -2 & -6  \\
+   0 & 3 & 6  \\
+   1 & -2 & 5
+   \end{bmatrix},
+   \textbf{b}=\begin{bmatrix}
+  11  \\
+  -5   \\
+  9
+  \end{bmatrix}
+\end{align*}
+\begin{align*}
+  \begin{bmatrix}
+ 1 & -2 & -6 & 11\\
+ 0 & 3 & 6 & -5\\
+ 1 & -2 & 5& 9
+ \end{bmatrix} \sim
+   \renewcommand\arraystretch{2}
+ \begin{bmatrix}
+1 & 0 & 0 & \frac{241}{33}\\
+0 & 1 & 0 & \frac{-43}{33}\\
+0 & 0 & 1 & \frac{-2}{11}
+\end{bmatrix}
+\end{align*}
+A unique solution exists for the given existence problem therefore yes $\textbf{b}$ is a linear combinations of the vectors in \textbf{A}
+\section{Problem 5}
+Let f(z) = az + b where $z \in \mathbb{C}$. Find a and b if f(z) translates z one unit up and one
+unit to the right, rotates the result by $\frac{\pi}{2}$
+clockwise and scales the resulting complex number
+by 2.\\\\
+Since the input value z is rotate around clockwise b y$\frac{\pi}{2}$ this means that part of the coefficient must be $e^{-\frac{\pi}{2}i}$ so to start we have:
+\[
+  f(z)=e^{-\frac{\pi}{2}i}z+b
+\]
+Next we must scale the complex number by 2 modifying the function to be
+\[
+  f(z)=2e^{-\frac{\pi}{2}i}z+b
+\]
+Finally to move each output up one and one to the right we must add $1+i$ to the result for a final description of
+\[
+  f(z)=2e^{-\frac{\pi}{2}i}z+(1+i))
+\]
+\end{document}
