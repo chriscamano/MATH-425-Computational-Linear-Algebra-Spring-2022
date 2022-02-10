@@ -1,0 +1,84 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat = newest}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH425 Lecture 4 }
+\date{2/3/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\newcommand{\q}{\quadd}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\rtwo}{$\mathbb{R}^2$}
+\newcommand{\C}{$\mathbb{C}$}
+
+\begin{document}
+\maketitle
+
+\section{Vectors}
+For this course we will be using a more abstract definition of a vector relating to a vector containing objects as opposed to raw numerical data. This decision is related to the selection of python versus MatLab. \\
+
+Vectors can be expressed in many different forms, for example a 2-vector consists of two elements and can be represented on the cartesian plane as a scaling of the basis vectors from the origin.
+\begin{align*}
+  v=
+  \begin{bmatrix}
+            1 \\
+            2 \\
+  \end{bmatrix}\\
+\end{align*}
+These two entries in the vector are with respect to the vector space the vector originates from. This means that is $$ v \in \mathbb{R}^2$$ these are real numbers and if $$ v \in \mathbb{C} $$ one component is real and the other is complex
+
+Vectors of the same vector space can be added component by component such that: \
+\begin{align*}
+  \begin{bmatrix}
+            1 \\
+            2 \\
+  \end{bmatrix}
+  +
+  \begin{bmatrix}
+            -1 \\
+            2 \\
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+            0 \\
+            4 \\
+  \end{bmatrix}\\
+\end{align*}
+\begin{align*}
+  \forall v,u,w \in \mathbb{F}^D\\
+  \textbf{  associativity}\\\\
+  (u+w)+v=u+(w+v)  \\\\
+  \textbf{  commutativity}\\\\
+  u+v=v+u \\
+\end{align*}
+We will define a vector in $\mathbb{F}^D$ as a function from D to $\mathbb{F}$. For this course the relevant fields include \rtwo,  $\mathbb{C}$, and GF2\\
+
+
+\section{Vector representations}
+One way to represent vectors is with a python list data structure. We will also represent vectors as the dictionary data structure where each index of the vector corresponds to a numerical key in the dictionary.  \\
+Vectors will be created using the Vec class paramterized constructor. The arguments of the constructor will be the domain and co domain of the vector. Given a set of elements in the co domain of a vector you can expedite this process by writing
+
+\[
+  \textbf{v=Vec(\{i for i in range(len(C))\},C)}
+\]
+Where C is the co domain\\
+\end{document}
