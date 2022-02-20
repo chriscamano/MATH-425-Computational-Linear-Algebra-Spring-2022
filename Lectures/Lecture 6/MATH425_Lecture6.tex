@@ -1,0 +1,101 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat = newest}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH425 Lecture 6 }
+\date{2/15/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\newcommand{\q}{\quad}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Rtwo}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\begin{document}
+\maketitle
+
+\section{Discussion of linear independence and Span}
+Given a set of vectors of the form
+\[
+  \{v_1,v_2,v_3\}
+\]
+Span$  \{v_1,v_2,v_3\}$ is the region spanned by all linear combination of these vectors. \\
+Discussion of linear systems: Given two equations of the from
+\[
+  2x-y=1, x+y=5
+\]
+We can augment these equations to a matrix of the form
+\[
+  \begin{bmatrix}
+    2&-1&1\\1&1&5
+  \end{bmatrix}
+\]
+\subsection{Row space view}
+understanding this matrix throught the perspective of row space we can understand the matrix as a series of rows$\{ v_{11},v_{21},..,v_{n1}\}$ dotted with \begin{bmatrix}
+  x_1\\x_2\\...\\x_n
+\end{bmatrix}
+such that
+\[
+  \{ v_{1,1},v_{2,1},..,v_{n-1,1}\} \cdot \begin{bmatrix}
+    x_1\\x_2\\...\\x_n
+  \end{bmatrix}= y_{1,n}
+\]
+In the context of this exmple we have
+\[\begin{bmatrix}
+    2&-1
+  \end{bmatrix} \cdot \begin{bmatrix}
+    x_1\\x_2
+  \end{bmatrix}= 1
+\]
+Through the row space view we can think of each row as a linear equation with the intersection of the rows representing the solution to the system of linear equations. //
+\subsection{Column Space view}
+Express the columns of the matrix as a linear combination such that the final vector is the product of the sum of these weighted columns:
+\[
+  x\begin{bmatrix}
+    2\\1
+\end{bmatrix}+  y\begin{bmatrix}
+    -1\\1
+\end{bmatrix}=  \begin{bmatrix}
+    1\\5
+\end{bmatrix}
+\]
+Essentially this is the process of thinking of stretching out vectors such that the sum of their now stretched version equates to the desired vector.//
+\subsection{Span}
+Span is the vector space formed by all linear combinations of a set of vectors.
+\[
+  \text{Let } \{v_1,v_2,...,v_n\} \in \mathbb{F}^n.
+\]
+\[
+  \text{Span } \{v_1,v_2,...,v_n\}
+\]
+is the set of all vectors of the form:
+\[
+  c_1v_1+c_2v_2+...+c_nv_n
+\]
+\[
+  c_1,c_2,...c_n \in \mathbb{F}^n
+\]
+\[
+  \text{Span }\{v_1,v_2,...,v_n\} \subset \mathbb{F}^n
+\]
+\end{document}
