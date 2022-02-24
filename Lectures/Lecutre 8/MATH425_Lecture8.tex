@@ -1,0 +1,100 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat = newest}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 425 Lecture 8 }
+\date{2/21/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\newcommand{\q}{\quad}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rtwo}{$\mathbb{R}^2$}
+\newcommand{\C}{$\mathbb{C}$}
+\newcommand{\fq}{\forall \ }
+\newcommand{\sect}[1]{\section*{#1}}
+\begin{document}
+\maketitle
+\sect{Linear independence Theorems}
+\begin{itemize}
+  \newcommand{\Axb}{\textbf{Ax=b} }
+  \newcommand{\Axz}{\textbf{Ax=0} }
+  \item A set of two vectors (non zero). $\{v_0,v_1\}$ is linearly dependent if the two are multiples of one another\\
+  This is to say that:
+  \[
+    \exists \quad v_2-cv_1=0
+  \]
+  \item If a set of vectors $S=\{v_1,v_2,...,v_p\} \in \mathbb{F}^n$ contains the zero vector then the set is linearly dependent as $\exists $ some linear combination over the set such that all other elements are zero and the zero vector has a scalar of some c, $c\in \R$.
+  \item If we have a set of vectors in $S=\{v_1,v_2,...,v_p\} \in \mathbb{F}^n$ and we have p vectors where p is greater than n then the set is linearly dependent as we have a suplus of vectors necessary to form a basis for $\mathbb{F}^n$.This is why when we augment a matrix no matter what since we have more vectors than necessary to build the basis we find a result. It is the linear combination of the vectors of A that yeild a given desired vector when solving \Axb
+
+  \item * a system is linearly dependent if there exists some free variable after preformaing row reduction on the augmented matrix representing the set of vectors.
+
+  \item The columns of a matrix are linearly independent  $\iff$ the equation \Axz has only the trivial solution.The question\Axz is a question asking can we form a lienar combination of the columns of A such that we find the zero vector.
+  \item If A is $\in \R^{mxn}$ with columns $\{a_1,...,a_n\}$ and if b is in $\mathbb{F}^n$ the matrix equation $$Ax=b}$$ has the same solution set as the vector equation
+  \[
+    \{ x_1a_1,x_2a_2,..,x_na_n\}=b
+  \]
+  Which in turn has the same solution set as the system of linear equations whose augmented matrix is: \
+  \[
+    \begin{bmatrix}
+      a_1&a_2&...&a_n |&b
+    \end{bmatrix}
+  \]
+  \item \Axb has an exact solution $\iff$ b is a linear combination of the columns of A. This is to say that $b \in \text{Span}\{ a_1,...a_n\}$ or that b is in Col(A) which is a shorthand for the span of A.
+  \newcommand{\mxn}{$\in \R^{mxn}$}
+    \newcommand{\lc}{ linear combination }
+  \item \textbf{EQUIVILANCE} Let A be \mxn. Then the following statements are either all true or all false.
+    \begin{itemize}
+      \item $\fq b \in \mathbb{F}^m$ the equation \Axb has a solution
+      \item $\fq b \in \mathbb{F}^m$ is a linear combination of the columns of A
+      \item Col(A)=$\mathbb{F^n}$
+      \item A has a pivot in every row when reduced to rref (n pivotsP)
+      \item The columns of A form a linearly independent set.
+      \item A is invertible
+      \item A is row equivilant to $\mathbb{I}_n$
+      \item $A^T$ is invertible
+      \item the rank of A is n
+      \item the rowspace of A Row(A) is $\mathbb{F}^n$
+      \item 0 is not an eigenvalue of A.
+      \item the null space of A is the zero vector
+      \item the dimension of the columns space is n
+      \item the columns of A form a basis for $\mathbb{R}^n$
+      \item The orthogonal complement of the column space of A is {0}.
+      \item The orthogonal complement of the null space of A is $\mathbb{R}^n$
+      \item The linear transformation x$\mapsto $Ax is a surjection.
+      \item The linear transformation x$\mapsto $Ax is one-to-one.
+      \item The matrix A has n non-zero singular values.
+    \end{itemize}
+\\
+\end{itemize}
+\textbf{Col(A)}\\
+is the span of the columns of a matrix, read as the column space of A.\\
+\\
+\sect{The python representation of matrices}
+For matrices in our python library we are using a dictionary where each tuple maps to an element. this is to say, for each index of the matrix the corresponding element contains some value that would otherwise be placed in that index of the matrix.
+\[
+  \begin{bmatrix}
+    1 & 2 \\ 3 & 4
+  \end{bmatrix}
+  =\{ ( 0,0):1, (0,1):2,(1,0):3,(1,1):4\}
+\]
+The class does not come with a parameterized constructor meaning it will have to be typed manually or a constructor will have to be built. 
+\end{document}
