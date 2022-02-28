@@ -1,0 +1,349 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 425 Homework 3 }
+\date{2/24/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+\noindent
+hw3 , \underline{PART A}: {\bf due on iLearn by 12:30pm on Thursday, March 3}
+\vskip 10pt
+\noindent
+
+\sect{Problem 1}
+\begin{proof}
+  1. Let $T({\bf x}) = A{\bf x}$. If
+  $A=\begin{bmatrix}
+  1 & -3 & ~~2\\
+  0 & ~~1 & -4\\
+  3 & -5 & -9
+  \end{bmatrix}$, and ${\bf b} = \begin{bmatrix}~~6\\ -7 \\ -9 \end{bmatrix}$, find a vector ${\bf x}$
+  whose image under $T$ is ${\bf b}$, and determine whether ${\bf x}$ is unique.\tab\tab
+  To solve this problem consider the augmented matrix $ [A \quad b]$
+  \[
+  [A \quad b]=\begin{bmatrix}
+  1 & -3 & ~~2&6\\
+  0 & ~~1 & -4&-7\\
+  3 & -5 & -9&-9
+  \end{bmatrix} \sim
+  \begin{bmatrix}
+  1 & 0 & 0&-5\\
+  0 & ~~1 & 0&-3\\
+  0 & 0 & 1&1
+  \end{bmatrix}
+  \]
+  Thus, a solution to to the question \Axb is
+  \[
+  \begin{bmatrix}
+  1 & -3 & ~~2\\
+  0 & ~~1 & -4\\
+  3 & -5 & -9
+  \end{bmatrix}
+  \begin{bmatrix}
+    -5\\-3\\1
+  \end{bmatrix}=
+  \begin{bmatrix}
+    6\\-7\\-9
+  \end{bmatrix}
+  \]
+  Since the solution to the problem \Axb only has this one solution x is unique as there does not exist another vector in $\R^3$ such that \Axb is true.
+  \noindent
+\end{proof}\tab\tab
+
+\sect{Problem 2}
+\begin{proof}
+  2. Let
+  $A=\begin{bmatrix}
+  ~~1 & 3 & 9 & ~~2\\
+  ~~1 & 0 & 3 & -4\\
+  ~~0 & 1 & 2 & ~~3\\
+  -2 & 3 & 0 & ~~5
+  \end{bmatrix}$ and ${\bf b} = \begin{bmatrix} -1 \\ ~~3 \\ -1 \\ ~~4 \end{bmatrix}$. Is ${\bf b}$ in the
+  range of the linear transformation $T({\bf x}) = A{\bf x} $ ?
+  \tab\tab
+  Let us again consider the question \Axb. To identify if a vector is contained in the range of a linear transformation, one must prove that the given vector is a an image of some other vector in the domain. This can be proven by examining if the system is consistent.
+  \[
+    [A \quad b]= \begin{bmatrix}
+    ~~1 & 3 & 9 & ~~2&-1\\
+    ~~1 & 0 & 3 & -4&3\\
+    ~~0 & 1 & 2 & ~~3&-1\\
+    -2 & 3 & 0 & ~~5&4
+    \end{bmatrix}
+    \sim
+    \begin{bmatrix}
+    ~~1 & 0 & 3 &0 &0\\
+    ~~0 & 1 & 2 & 0&0\\
+    ~~0 & 0 & 0 & 1&0\\
+    ~~0 & 0 & 0 & 0&1
+    \end{bmatrix}
+  \]
+  Here it can be seen that the equation
+  \[
+    T(x)=b
+  \]
+  Has no solution as the system of linear equations is inconsistent. Examine on the last row the statement 0=1 is false meaning $\nexists x \in \R^n : \Axb$
+  \noindent
+\end{proof}\tab\tab
+
+\sect{Problem 3}
+\begin{proof}
+  3. Let $T : {\Bbb R}^n \rightarrow {\Bbb R}^m$ be a linear transformation, and let
+  $\left\{ {\bf v}_1, {\bf v}_2, {\bf v_3} \right \}$ be a linearly dependent set in ${\Bbb R}^n$. Explain
+  why the set $\left\{ T({\bf v}_1), T({\bf v}_2), T({\bf v_3}) \right \}$ is linearly dependent.
+  \tab\tab
+  If$\left\{ {\bf v}_1, {\bf v}_2, {\bf v_3} \right \}$ is linearly dependent then there exists a solution to the question \Axz other than the trivial solution.\tab
+  This implies the following:
+  \[
+    c_1v_1+c_2v_2+c_3v_3=0
+  \]
+  preforming the linear transformation T yeilds:
+  \[
+    c_1T(v_1)+c_2T(v_2)+c_3T(v_3)=0
+  \]
+  as we can manipulate the coeffient using the properties of linear transformations. Because the system's coefficients sum to zero we know now that the liner trnansformation applied to each individual vector would still construct a linearly dependent set. To visualize this let $T(v_i)=u_i$ then :
+
+  \[
+    c_1u_1+c_2u_2+c_3u_3=0
+  \]
+  Which brings us back to the original definition of a linearly dependent set of vectors.
+  \noindent
+\end{proof}\tab\tab
+
+\sect{Problem 4}
+\begin{proof}
+  4. Consider a linear transformation from $T : {\Bbb R}^3 \rightarrow {\Bbb R}^2$, where
+  \[
+  T\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} = \begin{bmatrix} 7 \\ 11 \end{bmatrix},\hskip 15pt T\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 6 \\ 9 \end{bmatrix},\hskip 15pt \mbox{and} \hskip 15pt
+  T\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} = \begin{bmatrix} -13\\~~17\end{bmatrix}.
+  \]
+  Find the standard matrix $A$ of the transformation $T$.
+  \[
+    A=\begin{bmatrix}
+      7&6&-13\\
+      11&9&17
+  \end{bmatrix}
+  \]
+  Proof:
+  \[
+  \begin{bmatrix}
+    7&6&-13\\
+    11&9&17
+  \end{bmatrix}
+  \begin{bmatrix}
+  0\\1\\0
+  \end{bmatrix}
+  =\begin{bmatrix}
+  6\\9
+  \end{bmatrix}
+  \]
+  This hold for the other two vectors which can be understood together as the basis for $R^3$.
+  \noindent
+\end{proof}\tab\tab
+
+\sect{Problem 5}
+\begin{proof}
+  5. Let $T: {\Bbb R}^2 \rightarrow {\Bbb R}^3$ be a linear transformation such that \\
+  $T(x_1,x_2) = (x_1-2x_2,-x_1+3x_2,3x_1-2x_2).$ Find ${\bf x}$ such that $T({\bf x}) = (-1,4,9).$
+  \tab\tab
+  \[
+    A=\begin{bmatrix}
+      ~1&-2\\-1&~3\\~3&-2
+  \end{bmatrix}
+  \]
+  \[
+  [A \quad b]=
+  \begin{bmatrix}
+    ~1&-2&-1\\-1&~3&4\\~3&-2&9
+  \end{bmatrix}\sim
+  \begin{bmatrix}
+    ~1&0&5\\0&~1&3\\~0&0&0
+  \end{bmatrix}
+  \therefore x=\begin{bmatrix}
+    5\\3
+  \end{bmatrix}
+  \]
+  \noindent
+\end{proof}\tab\tab
+
+\sect{Problem 6}
+\begin{proof}
+  6. Find the standard matrix for the linear transformation $T: {\Bbb R}^2 \rightarrow {\Bbb R}^2$
+  which is a horizontal shear transformation that leaves ${\bf e}_1$ unchanged and maps
+  ${\bf e}_2$ into ${\bf e}_2 + 3{\bf e}_1$.
+  \tab\tab
+  In order to preform a horizontal shear we will need to have a linear transformation of the form
+  \[
+    \begin{bmatrix}
+      1&k\\0&1
+    \end{bmatrix}
+  \]
+  note that the expression ${\bf e}_2 + 3{\bf e}_1$ expressed as a matrix alongside with $e_1$ unchanged yeilds:
+  \[
+  \begin{bmatrix}
+    1&3\\0&1
+  \end{bmatrix}
+  \]
+  This is a shear transformation that accomplishes the desired transform we wanted in which each value of $e_2$ is translated by $3e_1$
+  \noindent
+\end{proof}\tab\tab
+%Problem7
+\sect{Problem 7}
+\begin{proof}
+  7. The color of light can be represented in a vector $\begin{bmatrix} R \\ G \\ B \end{bmatrix}$ where $R = \text{amount of red}$,
+  $G = \text{amount of green}$, and $B = \text{amount of blue}$. The human eye and the brain transform the incoming signal into the
+  signal $\begin{bmatrix} I \\ L \\ S\end{bmatrix}$, where
+  \[
+  \begin{matrix}
+  \text{~~~~~~~~~~intensity} & I & = & \frac{R+G+B}{3}\\
+  \text{long-wave signal} & L & = & R - G \\
+  \text{short-wave signal} & S & =& B - \frac{R+G}{2}.
+  \end{matrix}
+  \]
+  \vskip 10pt
+  \noindent
+  (a) Find the matrix $P$ representing the transformation from  $\begin{bmatrix} R \\ G \\ B \end{bmatrix}$ to
+  $\begin{bmatrix} I \\ L \\ S\end{bmatrix}$
+  \vskip 5pt
+  \[
+  \renewcommand{\arraystretch}{2.5}
+    P=\begin{bmatrix}c
+      \frac{1}{3}&  \frac{1}{3}&  \frac{1}{3}\\
+      1&-1&0\\
+      \frac{-1}{2}&\frac{-1}{2}&1
+  \end{bmatrix}
+  \]
+  \noindent
+  (b) Consider a pair of yellow sunglasses for water sports which cuts out all blue light and passes all red and green light. Find the
+  matrix $A$ which represents the transformation incoming light undergoes as it passes through the sunglasses.
+  \[
+  \begin{bmatrix}
+    1&0&0\\0&1&0\\0&0&0
+  \end{bmatrix}
+  \]
+  With the matrix detailed above notice how since there is no basis vector for the blue light variable we observe that the output of the transformation leads to value of blue light staying zero "cutting the light out"
+  \vskip 5pt
+  \noindent
+  (c) Find the matrix for the composite transformation which light undergoes as it first passes through the sunglasses and then the eye.
+  \renewcommand{\arraystretch}{2.5}
+  \[
+  \begin{bmatrix}
+      \frac{1}{3}&  \frac{1}{3}&  \frac{1}{3}\\
+      1&-1&0\\
+      \frac{-1}{2}&\frac{-1}{2}&1
+  \end{bmatrix}
+  \begin{bmatrix}
+    1&0&0\\0&1&0\\0&0&0
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    \frac{1}{3}&  \frac{1}{3}&  0\\
+    1&-1&0\\
+    \frac{-1}{2}&\frac{-1}{2}&0
+  \end{bmatrix}
+  \]
+  \vskip 10pt
+  \noindent
+\end{proof}\tab\tab
+
+\sect{Problem 8}
+\begin{proof}
+  8.~ Let ${\bf v}$ be a fixed vector in ${\mathbb R}^n$ and let $T: {\mathbb R}^n \rightarrow {\mathbb R}$ be the mapping defined
+  by $T({\bf x}) = {\bf v}^T {\bf x}$ (i.e. the standard inner product).
+  \begin{itemize}
+  \item[(a)] Is $T$ a linear operator?
+
+  This question is somewhat confusing for me. In class on 2/24 we defined a linear operator as a transformation that maps one vector space to iteself. If this is the definition we will use for this class then no T is not a linear operator as there is a dimensionality reduction between the domain and codomain indicating that the vector space cahnges during the mapping.
+  \item[(b)] Is $T$ a linear transformation?
+  To prove that T is a linear oeprator we must first prove the two following properties:
+  \begin{align*}
+    T(x+y)=T(X)+T(y)\\
+    T(cx)+cT(x)
+  \end{align*}
+    \[
+        v^T(x+y)=v^T(x)+v^T(y)\\
+    \]
+    \[
+    v^T(cx)=cv^Tx (\text{commutativity of multiplication})
+    \]
+    Therefore t is a linear transformation
+  \end{itemize}
+  \vskip 10pt
+  \noindent
+\end{proof}\tab\tab
+%Problem9
+\begin{proof}
+  9.~  Find the $ 3 \times 3$ matrices that produce the described composite 2D transformations, using homogeneous coordinates. Apply the transformations to the {\bf letter N} data, ``letterN.pny" and submit the corresponding plots as well.
+  \begin{itemize}
+  \item[(a)] Translate by $(-2, 3)$, and then scale the $x$-coordinate by $0.8$ and the $y$-coordinate by $1.2$
+  \[
+
+    \begin{bmatrix}
+      1&0&-2\\
+      0&1&3\\
+      0&0&1
+    \end{bmatrix}
+      \begin{bmatrix}
+        .8&0&0\\
+        0&1.2&0\\
+        0&0&1
+      \end{bmatrix}=\begin{bmatrix}
+        .8&0&-2\\
+        0&1.2&3\\
+        0&0&1
+      \end{bmatrix}
+  \]
+  \item[(b)] Rotate points $\frac{\pi}{6}$, and then reflect through the $x$-axis.
+  For this problem since it is not specified I will be rotating counter clockwise
+  \[
+  \renewcommand{\arraystretch}{2.5}
+    \begin{bmatrix}
+      \cos{\frac{\pi}{6}}&-\sin{\frac{\pi}{6}}&0\\
+      \sin{\frac{\pi}{6}}& \cos{\frac{\pi}{6}}&0\\
+      0&0&1
+    \end{bmatrix}
+    \begin{bmatrix}
+    1&0&0\\
+          0&-1&0\\
+      0&0&1
+    \end{bmatrix}=\begin{bmatrix}
+      \cos{\frac{\pi}{6}}&\sin{\frac{\pi}{6}}&0\\
+      \sin{\frac{\pi}{6}}& -\cos{\frac{\pi}{6}}&0\\
+      0&0&1
+    \end{bmatrix}
+  \]
+  \end{itemize}
+\end{proof}
+\end{document}

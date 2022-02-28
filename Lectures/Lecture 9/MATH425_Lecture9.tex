@@ -1,0 +1,110 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{nccmath}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{mathtools,amssymb}
+\usepackage{tikz}
+\usepackage{xcolor}
+\pgfplotsset{compat = newest}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 425 Lecture 9 }
+\date{2/24/2022}
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+%%%%%%Macros for 425%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\sect{Linear Transformations}
+
+Let U and V be vetor spaces over $\mathbb{F}( \R,\C,GF(2))$ let $ x,y \in U$ and $c\in \F$\tab
+$T: U \mapsto V $ is a linear transformation $\iff$
+  \begin{align*}
+    T(x+y)=T(x)+T(y)\\
+    T(cx)=cT(x)\\ \therefore\\
+    T(cx+y)=cT(x)+T(y)
+  \end{align*}
+\textbf{A linear operator}\\
+A linear operator is a transformation : \[
+  T: U \mapsto U
+\] this is to say linear transformation that takes a vector space to itself\tab
+A transformation T is not linear if $T(\vec{0}_U) \neq \vec{0}_V$
+\tab
+\sect{Framing Linear Transformations}
+ A linear transformation can be thought of as a function that maps some$x \in \F^n$ where $\F^n$ is the domain to some $y\in\F^m$ where $\F^m$ is the co-domain. The domain and co domain do not have to have different dimensions.\\
+ \[
+   \text{if } \text{dim}(U)< \text{dim}(V)
+ \]
+ The region a linear transformation maps the values of the domain to is called the range r where:
+ \[
+    r \subset \F^m
+ \]
+This is to say the range is a subset of the codomain of the linear transformation \tab
+\textbf{Boateng description}\\
+T(x) is the image of x under the action of T the set of all images T (x) is called the range of T.
+\tab
+\textbf{Additional properties of linear transformations}\\
+All matrix-vector multiplications are linear transformations:
+\[
+  \text{Let} A \in \F^\mxn, x,y \in \F^n \land c \in \F
+\]
+\[
+  A(cx+y) = cA(x)+A(y)
+\]
+All linear transformations on finite dimensional vector spaces
+will alwways have a matrix representation
+\tab
+The standard matrix A for the linear transformation T: $\F^n \mapsto \F^m$ is completely determined by what id does to the columns of the nxn identity matrix $\mathbb{I}_n}$
+\\
+Proof:
+\[
+  \text {Let }x \in \F^n \rightarrow x=\matbb{I}=x\begin{bmatrix}
+    |&|& &|\\
+    e_1,&e_2,&..,&e_n\\
+    |&|& &|\\
+\end{bmatrix}
+\]
+Then:
+\begin{align*}
+  T(x)=t(x_1e_1+...+x_ne_n)\\
+  =x_1T(e_1)+....+x_nT(e_n)\\
+  \begin{bmatrix}
+    |&|& &|\\
+    T(e_1),&T(e_2),&..,&T(e_n)\\
+    |&|& &|\\
+\end{bmatrix}\begin{bmatrix}
+x_1\\...\\x_n
+\end{bmatrix}
+\end{align*}
+
+\end{tabular}
+\end{document}
