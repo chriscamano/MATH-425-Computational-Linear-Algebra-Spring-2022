@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 425  Lecture 11 }
+\date{3/3/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+\begin{document}
+\maketitle
+\sect{Review of homework}
+You can only talk about eigenvalues in the context of square matrices or linear operators.
+\textbf{Try researching linear transformations that operate as dimensionality reduction}This is in some ways a projection to a lower dimensional subspace.
+
+\sect{Homegenous Coordinates}
+One methodology for evaluating whether or not a transformation is a linear transforamtion is examining the effect the transformation has on the zero vector. A transforamtion is not linear if the zero vector is mapped to some other location. \\
+\textbf{Homogenus Coordinates}: A method for preforming translation via matrix multiplication. This can be used to translate a two dimensional place through a three dimensional space. :
+\[
+  \text{ Given }x,y,\in \R^2\quad  \forall a,z \in \R, z\neq 0 \quad (xz,yz,z)
+\]
+are the Homogenus Coordinates of xy.
+\newcommand{\hg}{Homogenus Coordinates }
+\\Suppose $(x,y)=(2,3)$ the \hg of (2,3) is (2,3,1)
+\\ This concept generalizes to higher dimensions as well:
+\[
+    \text{ Given }x,y,z\in \R^3\quad  \forall h\in \R, h\neq 0 \quad (xh,yh,zh,h)
+\]
+are the Homogenus Coordinates of xyz.\\
+\\
+Translation can be understood as a form of matrix multiplication: \\
+Recall for a translation by some vector $v=\begin{bmatrix}
+  h\\k
+\end{bmatrix}$
+\[
+  \begin{bmatrix}
+    x\\y
+  \end{bmatrix}
+  \mapsto
+  \begin{bmatrix}
+    x\\y
+  \end{bmatrix}+
+  \begin{bmatrix}
+    h\\k
+  \end{bmatrix}=
+  \begin{bmatrix}
+    x+h\\y+k
+  \end{bmatrix}
+\]
+which is the transformation that desicribes the translation of x by vector v\\
+The matrix multiplication is:
+\[
+\begin{bmatrix}
+1&0&h\\
+0&1&k\\
+0&0&1\\
+\end{bmatrix}
+\begin{bmatrix}
+  x\\y\\1
+\end{bmatrix}=
+\begin{bmatrix}
+  x+h\\y+k\\1
+\end{bmatrix}
+\]
+Let H=
+\[
+\begin{bmatrix}
+\mathbb{I} &v\\
+\vec{0}^T & 1
+\end{bmatrix}
+\]
+Any linear transformation on $\R^n$ is represented with respect to
+\hg by a partitioned matrix of the form:
+\[
+H=
+\renewcommand{\arraystretch}{1.5}
+\begin{bmatrix}
+A &\vec{0}\\
+\vec{0}^T & 1
+\end{bmatrix}
+\]
+Where A is the nxn matrix of the transformationin $\R^n$\\
+
+\textbf{2d scalar matrix in \hg}
+\\
+let A= $\begin{bmatrix}
+  k&0\\0&h
+\end{bmatrix}$
+\[
+\renewcommand{\arraystretch}{1.5}
+\begin{bmatrix}
+A &\vec{0}\\
+\vec{0}^T & 1
+\end{bmatrix}
+\]
+\textbf{2d rotation matrix by theta in \hg}
+\\
+let A= $\begin{bmatrix}
+  \cos(\theta)&-\sin(\theta)\\\sin(\theta)&\cos(\theta)
+\end{bmatrix}$
+\[
+\renewcommand{\arraystretch}{1.5}
+\begin{bmatrix}
+A &\vec{0}\\
+\vec{0}^T & 1
+\end{bmatrix}
+\]
+
+\textbf{2d rotation matrix by theta in \hg}
+\\
+\end{document}

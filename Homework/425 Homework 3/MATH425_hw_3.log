@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  26 FEB 2022 11:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  2 MAR 2022 23:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -646,32 +646,32 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--309
+Underfull \hbox (badness 10000) in paragraph at lines 304--310
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--309
+Underfull \hbox (badness 10000) in paragraph at lines 304--310
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--309
+Underfull \hbox (badness 10000) in paragraph at lines 304--310
 
  []
 
-./MATH425_hw_3.tex:312: Missing $ inserted.
+./MATH425_hw_3.tex:313: Missing $ inserted.
 <inserted text> 
                 $
-l.312 
+l.313 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./MATH425_hw_3.tex:312: Missing } inserted.
+./MATH425_hw_3.tex:313: Missing } inserted.
 <inserted text> 
                 }
-l.312 
+l.313 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -679,18 +679,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH425_hw_3.tex:312: Display math should end with $$.
+./MATH425_hw_3.tex:313: Display math should end with $$.
 <to be read again> 
                    \tex_par:D 
-l.312 
+l.313 
       
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
-./MATH425_hw_3.tex:312: Extra }, or forgotten \endgroup.
+./MATH425_hw_3.tex:313: Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.312 
+l.313 
       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -698,18 +698,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./MATH425_hw_3.tex:313: Missing $ inserted.
+./MATH425_hw_3.tex:314: Missing $ inserted.
 <inserted text> 
                 $
-l.313     \begin{bmatrix}
+l.314     \begin{bmatrix}
                          
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./MATH425_hw_3.tex:317: Missing $ inserted.
+./MATH425_hw_3.tex:318: Missing $ inserted.
 <inserted text> 
                 $
-l.317     \end{bmatrix}
+l.318     \end{bmatrix}
                        
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -717,18 +717,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH425_hw_3.tex:318: Missing $ inserted.
+./MATH425_hw_3.tex:319: Missing $ inserted.
 <inserted text> 
                 $
-l.318       \begin{bmatrix}
+l.319       \begin{bmatrix}
                            
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./MATH425_hw_3.tex:322: Missing $ inserted.
+./MATH425_hw_3.tex:323: Missing $ inserted.
 <inserted text> 
                 $
-l.322       \end{bmatrix}
+l.323       \end{bmatrix}
                          =\begin{bmatrix}
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -736,18 +736,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH425_hw_3.tex:322: Missing $ inserted.
+./MATH425_hw_3.tex:323: Missing $ inserted.
 <inserted text> 
                 $
-l.322       \end{bmatrix}=\begin{bmatrix}
+l.323       \end{bmatrix}=\begin{bmatrix}
                                          
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./MATH425_hw_3.tex:326: Missing $ inserted.
+./MATH425_hw_3.tex:327: Missing $ inserted.
 <inserted text> 
                 $
-l.326       \end{bmatrix}
+l.327       \end{bmatrix}
                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -756,22 +756,22 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./MATH425_hw_3.tex:327: LaTeX Error: Bad math environment delimiter.
+./MATH425_hw_3.tex:328: LaTeX Error: Bad math environment delimiter.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.327   \]
+l.328   \]
           
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-./MATH425_hw_3.tex:327: Missing $ inserted.
+./MATH425_hw_3.tex:328: Missing $ inserted.
 <inserted text> 
                 $
-l.327   \]
+l.328   \]
           
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -779,22 +779,22 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-./MATH425_hw_3.tex:327: Display math should end with $$.
+./MATH425_hw_3.tex:328: Display math should end with $$.
 <to be read again> 
                    \endgroup 
-l.327   \]
+l.328   \]
           
 The `$' that I just saw supposedly matches a previous `$$'.
 So I shall assume that you typed `$$' both times.
 
 
-./MATH425_hw_3.tex:344: LaTeX Error: \begin{document} ended by \end{proof}.
+./MATH425_hw_3.tex:349: LaTeX Error: \begin{document} ended by \end{proof}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.344 \end{proof}
+l.349 \end{proof}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -804,7 +804,7 @@ or  <return>  to continue without it.
 Here is how much of TeX's memory you used:
  2387 strings out of 478542
  31541 string characters out of 5854402
- 337309 words of memory out of 5000000
+ 338309 words of memory out of 5000000
  20327 multiletter control sequences out of 15000+600000
  412507 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -820,7 +820,7 @@ ublic/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbo
 ls/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb>
-Output written on MATH425_hw_3.pdf (6 pages, 126618 bytes).
+Output written on MATH425_hw_3.pdf (6 pages, 128157 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream

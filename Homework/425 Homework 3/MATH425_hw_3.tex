@@ -79,7 +79,7 @@ hw3 , \underline{PART A}: {\bf due on iLearn by 12:30pm on Thursday, March 3}
     6\\-7\\-9
   \end{bmatrix}
   \]
-  Since the solution to the problem \Axb only has this one solution x is unique as there does not exist another vector in $\R^3$ such that \Axb is true.
+  Since the solution to the problem \Axb only has this one solution x is unique as there does not exist another vector in $\R^3$ such that \Axb is true.There are no free variables meaning that this one linear combination of the columns of A yields b
   \noindent
 \end{proof}\tab\tab
 
@@ -169,7 +169,7 @@ hw3 , \underline{PART A}: {\bf due on iLearn by 12:30pm on Thursday, March 3}
   6\\9
   \end{bmatrix}
   \]
-  This hold for the other two vectors which can be understood together as the basis for $R^3$.
+  This holds for the other two vectors which can be understood together as the basis for $R^3$.
   \noindent
 \end{proof}\tab\tab
 
@@ -239,7 +239,7 @@ hw3 , \underline{PART A}: {\bf due on iLearn by 12:30pm on Thursday, March 3}
   \vskip 5pt
   \[
   \renewcommand{\arraystretch}{2.5}
-    P=\begin{bmatrix}c
+    P=\begin{bmatrix}
       \frac{1}{3}&  \frac{1}{3}&  \frac{1}{3}\\
       1&-1&0\\
       \frac{-1}{2}&\frac{-1}{2}&1
@@ -287,24 +287,25 @@ hw3 , \underline{PART A}: {\bf due on iLearn by 12:30pm on Thursday, March 3}
 
   This question is somewhat confusing for me. In class on 2/24 we defined a linear operator as a transformation that maps one vector space to iteself. If this is the definition we will use for this class then no T is not a linear operator as there is a dimensionality reduction between the domain and codomain indicating that the vector space cahnges during the mapping.
   \item[(b)] Is $T$ a linear transformation?
-  To prove that T is a linear oeprator we must first prove the two following properties:
+  To prove that T is a linear transformation we must first prove the two following properties:
   \begin{align*}
     T(x+y)=T(X)+T(y)\\
     T(cx)+cT(x)
   \end{align*}
     \[
-        v^T(x+y)=v^T(x)+v^T(y)\\
+        v^T(x+y)=v^T(x)+v^T(y)\\ (\text{distributive law})
     \]
     \[
     v^T(cx)=cv^Tx (\text{commutativity of multiplication})
     \]
-    Therefore t is a linear transformation
+    Therefore T is a linear transformation
   \end{itemize}
   \vskip 10pt
   \noindent
 \end{proof}\tab\tab
 %Problem9
 \begin{proof}
+  PROBLEM MOVED TO NEXT WEEK
   9.~  Find the $ 3 \times 3$ matrices that produce the described composite 2D transformations, using homogeneous coordinates. Apply the transformations to the {\bf letter N} data, ``letterN.pny" and submit the corresponding plots as well.
   \begin{itemize}
   \item[(a)] Translate by $(-2, 3)$, and then scale the $x$-coordinate by $0.8$ and the $y$-coordinate by $1.2$

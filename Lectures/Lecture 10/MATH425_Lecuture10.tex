@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 425  Lecture 10 }
+\date{3/1/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+\begin{document}
+\maketitle
+\sect{Surjectivity and injectivity}
+Let $T:\F^n \mapsto \F^m$ be a lienar mapping (transformation):
+\begin{itemize}
+  \item Is each $b \in \F^m$ the image of at least one x in $\F^n$?Is there always a solution $x \in \F^n$ such that \Axb?
+  \item Is there a linear combination of the columbs of A that gives b? Is $ b\in$ Col(A)
+\end{itemize}
+\textbf{Onto/surjective} A mapping $T:\F^n \mapsto \F^m$ is said to be surjective if \[
+  \forall b \in \F^m\quad  \exists x :  b=img(x), x\in \F^n
+\]
+If a linear transformation maps one vector space to a smaller vector space there is no way for it to be surjective as there exists some some elements in the original vector space that do not have an image in the smaller vector space.
+\[
+  \forall \F^n,\F^m m<n \quad T:\F^n \mapsto \F^m \text{ is not onto as } \exists b \in \F^n : \nexists img(b)=x, x \in \F^m
+\]
+\textbf{One to One/ injective}
+If $ b\in \F^m$ is an image of exactly one x in $\F^n$ it is called injective. This is to say there is a one to one correspondence between each point in the original vector space and the smaller one. If there is a solution to \Axb is the solution unique? is the system linearly independent? If the system is linearly dependent then this means that there exist multiple solutions for a given b and the linear transformation is not injective. \\
+A mapping $T:\F^n \mapsto \F^m$ is injetive $\iff$
+\[
+   \forall b \in \F^m \exists \text{ only one } img(x)=b, x\in \F^n
+\]
+\textbf{Theorem} Let $T:\F^n \mapsto \F^m$ be a linear transformation and let A be the standard matrix for T. Then:
+\begin{itemize}
+  \item T maps $\F^n$ onto $\F^m$ $\iff col(A)=\F^m$
+  \item T is one to one $\iff$ there are no free variables and the columns of A are linearly independent.
+\end{itemize}
+\sect{Notes for A3-9}
+if you wish to do linear transformations from $\R^2\mapsto \R^2$
+\end{document}
