@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH425  Lecture 12}
+\date{3/8/2022}
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+\newcommand{\bb}[1]{\mathbb*{#1}}
+\newcommand{\cal}[1]{\mathcal*{#1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\tf}{\therefore}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+
+\sect{Subspaces}
+
+\textbf{Subspace} \\
+A subspace of $ \F^n$ is any subset H of $\F^n$ that has the following properties.
+
+\begin{itemize}
+  \item The zero vector $\in$ H $\therefore \vec{0} \in H$
+
+  \item $\forall$ u and v $\in$ H , u+v $\in H$, this is to say that the vectorspace is closed under addition as $\nexists$ some u,v $\in H$ : u+v $\notin$ H
+
+  \item $\forall u \in H$ and scalar $c \in \R$ the vector cu $\in H$ (closed under multiplication)
+\end{itemize}
+The span of a set of vectors is a subspace.\\
+\[
+  \text{Let } \mathcal{S} =\{v_1,v_2,...,v_r\}. \text{Span(S)}
+\]
+is a subspace $\iff$
+\begin{itemize}
+  \item $\vec{0}\in Span(S)$
+  \item Let u,w $\in$ Span(S)$\rightarrow \exists a_1,a_2,...,a_r b_1,b_2,...,b_r \in \F$: \\
+  u=$a_1v_1+a_2v_2+...+a_rv_r$\\
+  w=$b_1v_1+b_2v_2+...+b_rv_r$\\
+  u+w=$(a_1+b_1)v_1+(a_2+b_2)v_2+...+(a_r+b_r)v_r$\\
+  $\therefore u+w \in Span(S)$
+  \item Let $u \in Span(S)$ and $c\in \F$ \\
+  $\exists a_1,a_2,...,a_r\in \F$ :\\
+   u=$a_1v_1+a_2v_2+...+a_rv_r$
+   cu=( a_1,a_2,...,a_r)cv\\
+   $\therefore cu \in Span(S)$
+\end{itemize}
+By these three properties Span(S) is a subspace.
+\\\\
+\textbf{Basis}\\
+A basis for a subspace H of $\F^n$ is a linearly independent set in H that spans H. There can be more than one set of vasis but the sets will have the same number of vectors as the other iterations will be the non reduced versions of the identity for that vectorspace.
+\\\\
+\textbf{Dimension}\\
+The Dimension of a non zero subspace H is the number of vectors in any basis of H the dimension of the zero subspace is defined to be 0. \\
+Commonly the dimension of a subspace is deoted dim(H) where H is the subspace in question.
+\\\\
+\textbf{Column Space}\\
+The column space of an mxn matrix A ColA is the set of all linear combinations of the columns of A. The column space is always a subspace of $\F^n$
+\\\\
+\textbf{Null space}\\
+The null space of a matrix $A_{mxn}$ NulA is the set of all solutions to the homogeneous equation Ax=0.Also denoted Kernel.The nulspace of A is a subspace of $\F^n$\\
+\begin{align*}
+  &A\vec{0}=\vec{0} \therefore \vec{0} \in NulA\\\\
+  &u,w \in NulA \therefore \\&Au=\vec{0}, Aw=\vec{0}\\
+  &A(u+w)=\vec{0}: \text{ as} Au+Aw=0+0=0
+\end{align*}
+\\\\
+
+\end{document}
