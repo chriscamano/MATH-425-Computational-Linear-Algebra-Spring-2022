@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage[final]{pdfpages}
+
+
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 425  Lecture 15 }
+\date{3/25/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+
+\sect{Opening Notes}
+Professor Hosten will be visiting next class. \\
+\sect{Orthogonality}
+\textbf{Unit Vector}\\ A unit vector is a vector of length one. \\
+To find a unit vector that is a basis for a subspace you first take a given vector in the subspace and normalize. This returns a unit vector for the subspace. \\\\
+\textbf{Orthogonal subspace $W^\perp$}\\ \[
+  \forall \text{ Subspaces }W, \exists W^\perp : \forall w\in W, w^\perp \in W^\perp\quad  w \cdot w^\perp=0
+\]
+This is to say for all subspaces there is an Orthogonal complement in which all vectors from the first subspace dotted with vectors in the orthogonal complement are 0.\\\\
+\textbf{Orthogonal complement }\\ The orthogonal complement of  a subspace is called the orthogonal complement. The orthogonal complement is the set of all vectors that are orthogonal to W.\\\\
+\[
+  \text{RowA}^\perp=\text{NulA}\quad \text{ColA}^\perp=\text{NulA}^T
+\]
+\textbf{Orthogonal sets}\\
+A set of vectors is an orthogonal set if each pair of distinct vectors from the set is orthogonal. \\\\
+\textbf{Orthonormal set}\\
+An orthonormal set is a set of orthogonal vectors that are normalized. \\\\
+An mxn matrix U has orthonormal columns iff :
+\[
+  U^TU=\mathbb{I}_n
+\]
+Proof:\begin{proof}
+$$
+  \text{Let } U = \begin{bmatrix}
+    |&|&|\\
+    $u_1$&$u_2$&...$u_3$\\
+    |&|&|\\
+\end{bmatrix}
+$$
+$u_i\in \F^n$
+\[
+  U^TU=\begin{bmatrix}
+    u_1^Tu_1&...& u_1^Tu_m\\
+    .&&.\\
+    .&&.\\
+    u_m^Tu_1&...& u_n^Tu_n
+\end{bmatrix}=\mathbb{I}_n
+\]
+as $\forall u_i, u_i\in U u_i^Tu_i=1$
+\end{proof}\\\\
+\textbf{Orthogonal matrix}\\
+A square matrix U for which $U^-1=U^T$ is called an orthogonal matrix. \\\\
+\textbf{Orthongality and linear independence }:
+If S =\{$u_1,....,u_p\}$ is an on orthongal set of non zero vectors in $\F^n$ then S  is linearly independent and is a basis for the subspace spanned by S. \\\\
+\textbf{Orthogonal basis}\\ An orthogonal basis for a subspace W of $\R^n$ is  a basis for W that is also an orthogonal set.\\
+\textbf{theorem}:\\
+Let U be an mxn matrix with Orthonormal columns and let x and y be in $\R^n$ then:
+\begin{itemize}
+  \item $Ux \cdot Uy=x\cdot y$
+  \item $||Ux||$=$||x||$
+  \item $Ux \cdot Uy$=0
+\end{itemize}\\
+\textbf{}
+\end{document}

@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 425  Lecture 18 }
+\date{4/14/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+Project now due 4/29.
+\sect{Least Squares Solutions}\\
+Least squares solutions can be found without computation of $\hat{b}$\\
+\[
+  b-\hat{b}=b-A\hat{x}\in \tex{Col}A^\perp
+\]
+Which is the same as saying:
+\[
+  b-A\hat{x}\in \textbf{NulA}^T
+\]
+as:
+\[
+  \text{ColA}^\perp=\text{NulA}^T
+\]
+This implies:
+\[
+  A^T(b-A\hat{x})=0
+\]
+\[
+  A^Tb-A^TA\hat{x}=0
+\]
+\[
+  A^TA\hat{x}=A^Tb
+\]
+This equation is largely more useful and does not require the computation of the orthogonal basis of A and the projection of b: $\hat{b}$.\\
+This method is used in the case of an inconsistent solution.
+\sect{QR decomposition}
+If A is an nxn matrix linerally independent columns, then A can be factored as A=QR where Q is an  mxn matrix whose columns form an orthgonormal basis for the columns space of A and R is an nxn matrix upper triangualar invertible matrix with positive enteries on its diagonal.
+\[
+  A=QR
+\]
+\[
+  A=\begin{bmatrix}
+    |&|&&|\\
+    v_1&v_2&...&v_n\\
+    |&|&&|\\
+\end{bmatrix}
+\begin{bmatrix}
+  r_{11}&r_{12}&\hdots&r_{1n}\\
+  0&r_{22}&\hdots&r_{2n}\\
+  \vdots&\vdots&\ddots&\vdots\\
+  0&0&\hdots&  r_{nn}
+\end{bmatrix}
+\]
+We can create an orthonormal basis for Col A by applying the Gram Schmidt process to Q. $QQ^T$ is the identity matrix. therfore, :
+\[
+  Q^TA=R
+\]
+Algorithm for QR decomposition: (Gram schmidt no shift) given A with linearly independent columns.
+# Algorithm: Classical Gram-Schmidt:\\
+def gram_schmidt(A):\\
+    R = np.zeros(A.shape)\\
+    Q = np.zeros(A.shape)\\
+    for j in range(len(A)):\\
+        v_j = A[j]\\
+        for i in range(j-1):\\
+            r_ij = u[i].transpose()*A[j]\\
+            v_j = v_i - r_ij*u_i\\
+            R[i,j] = r_ij\\
+        r_jj = v_j.magnitude()\\
+        u_j = v_j / r_jj\\
+        Q[i][j] = u_j\\
+\sect{least Squares with QR }
+If A has linearly independent columns then A can be factored as A=QR:
+\[
+  A^TAx=A^tb
+\]
+\[
+  A^T=(QR)^T=R^TQ^T\quad \therefore
+\]
+\[
+  A^TA=R^TQ^TQ^R
+\]
+\[
+  R^TR\hat{x}=R^TQ^Tb
+\]
+\[
+  (R^T)^{-1}R^TR\hat{x}=(R^T)^{-1}R^TQ^Tb
+\]
+\[
+  R\hat{x}=Q^Tb
+\]
+From here we can use back substitution to solve for the solution.
+\sect{Curve fitting}
+Given m data points$(x_1,y_1),...,(x_m,ym)$ if the data points lie on the line then for the line \[
+  y=\beta_0+\beta_1x
+\]
+If data points lie on the line y$\in ColX$ but ot all data points lie on the line$y\notin COLx$ we want to find beta\\
+\[
+  \begin{bmatrix}
+    1\\0\\0
+  \end{bmatrix}
+  \begin{bmatrix}
+    1\\1\\0
+  \end{bmatrix}
+  \begin{bmatrix}
+    1\\-1\\0
+  \end{bmatrix}
+  \begin{bmatrix}
+    1\\0\\1
+  \end{bmatrix}
+  \begin{bmatrix}
+    1\\0\\-1
+  \end{bmatrix}
+  \begin{bmatrix}
+    0\\1\\1
+  \end{bmatrix}
+  \begin{bmatrix}
+    0\\1\\-1
+  \end{bmatrix}
+  \begin{bmatrix}
+    0\\-1\\1
+  \end{bmatrix}
+  \begin{bmatrix}
+    0\\-1\\-1
+  \end{bmatrix}
+\]
+\end{document}

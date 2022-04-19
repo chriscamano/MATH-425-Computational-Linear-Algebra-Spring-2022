@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 425  Lecture 17 }
+\date{4/4/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+\sect{The gram schmidt process}\\
+Given a basis $\{x_1,...,x_p\}$ for a subspace W $\in \F^n$ let:
+\begin{align*}
+  &v_1=x_1\\
+  & u_1=\frac{v_1}{||v_1||}=\frac{v_1}{r_{11}}\\
+  &v_2 =x_2-(u_1\cdot x_2)u1=x_2-r_{11}u_1\\
+  &u_2=\frac{v_2}{||v_2||}=\frac{v_2}{r_{22}}\\
+  &v_3=v_3-(x_3 \cdot u_1)u_1-(x_3 \cdot u_2 )u_2\\
+  &u_3=\frac{v_3}{||v_3||}=\frac{v_3}{r_{33}}\\
+  ...\\
+  &v_p=x_p-(x_p \cdot u_1)u_1 -...-(x_p \cdot u_p)u_p\\
+  &u_p=\frac{u_p}{||u_P||}=\frac{v_3}{v_rr}
+\end{align*}
+\[
+  v_j=x_j-\sum_{k=1}^{j-1}(x_k\cdot x_j)u_k=x_j-\sum_{k=1}^{j-1}r_{kj}u_k
+\]
+Without normalization:
+\[
+  x_j-\sum_{k=1}^{j-1}\frac{(x_k\cdot x_j)}{v_k\cdot v_k}v_k
+\]
+This yeilds an orthonormal basis for W $\{u_1,...,u_p\}$. Any non zero subspace W has an orthonormal basis.\\\\
+\[
+  \sum_{k=0}^w{w\choose 2k}{2k \choose k}
+\]
+\end{document}
