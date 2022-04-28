@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 425  Lecture 20 }
+\date{4/21/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+\sect{Test on thursday. }
+\sect{Diagonalization of symmetric matricies.}\\
+Find eigenbalues of $\lambda$ corresponding to eigen vectors.
+
+\[
+  det(A-\lambda \mathbb{I}_n)=0
+\]
+compute the determinant of the modified matrix and you will obtain a characteristic polynomial whos roots are : $\lambda_1,...,\lambda_n$ where n is the degree of the characteristic polynomial. \\
+To compute eigenvectors solve for:
+\[
+  (A-\lambda_i \mathbb{I}_n)v=\vec{0}
+\]
+where $\lambda_i$ corresponds to the ith eigenvalue
+\sect{theorem}
+If a matrix A is shmmetric then any two eigenvectors from different eigenspaces are orthogonal.
+\sect{Orthogonal diagonalization}
+This motivates that a matrix can be factored into the following:
+$$A=QDQ^T  $$
+When Q is an orthogonal basis for A. we can obtain an orthogonal diagonalization when A is symmetric. \\
+This implies A is symmetric as :
+\begin{align*}
+  &A^T=(QDQ^T)^T\\
+  &A^T=(Q^T)^TD^TQ^T\\
+  &A^T=QDQ^T\\
+  &A^T=A
+\end{align*}
+\sect{Spectral Theorem}
+Let A be a symmetric matrix then: \\
+\begin{itemize}
+  \item Every eigenvalue of A is Real and the dimension of the eigenspace is corresponding to $\lambda$ equals the multiplicity of the eigenvalue.
+  \item Eigenvectors corresponding to different eigenvalues are orthogonal (eigenspaces are orthgonal.)
+  \item Matrix A is orthogonally diagonalizable.
+  \item The columns of Q form an orthonormal basis.
+\end{itemize}
+\sect{Singular value decomposition}
+Given an Mxn matrix A  with rank r. can be factored as :
+\[
+  A=U_{mxm}\Sigma_{mxn} V^T_{nxn}
+\]
+This is an orthgonal matrix multiplied by a "diagonal matrix" then by another orthogonal matrix.\\
+U is an mxm unitary matrix, sigma is the diagonal matrix of singular the singular values where:
+\[
+  \sigma_i=\sqrt{\lambda_i}
+\]
+r=rank(A)=dim(ColA)
+\sect{Finding V}
+\[
+  A=U\Sigma V^T
+\]
+so \[
+  A^TA=(U\Sigma V^T )^T U\Sigma V^T =V\Sigma^TU^TU\Sigma V^T
+\]
+\[
+  =V\Sigma^2V^T=V\Lambda V^T
+\]
+So we have proven the orthgonal diagonalization of the matrix as well.
+If you find $A^tA$ and orthgonally diagonlize then square root D.
+If A is symmetric then the eigenvalues of A  the sqaures of the singular values since you are just squaring A when you compute $A^TA$
+
+\sect{Computing U in U$\Sigma$V}
+Approach number 1:
+\begin{align*}
+  &A=U\Sigma V^T\\
+  &AA^T=U\Sigma V^T(U\Sigma V^T)^T\\
+  &AA^T=U\Sigma ^2 U^T\\
+  &AA^T=U\Lambda U^T
+\end{align*}
+\end{document}

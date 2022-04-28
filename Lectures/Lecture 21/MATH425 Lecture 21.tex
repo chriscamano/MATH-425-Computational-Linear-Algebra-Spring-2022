@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\pagestyle{empty}
+\author{Chris Camano: ccamano@sfsu.edu}
+\title{MATH 425  Lecture 21 }
+\date{4/14/2022}
+
+\topmargin -0.6in
+\headsep 0.40in
+\oddsidemargin 0.0in
+\textheight 9.0in
+\textwidth 6.5in
+
+\newcommand{\econst}{\mathrm{e}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\dwrt}[1]{\frac{\diff}{\diff #1}}
+%%%%%%Macros for 425%%%%%%%%%%%%%%%%%%%
+\newcommand{\q}{\quad}
+\newcommand{\tab}{\\\\}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\newcommand{\sect}[1]{\section*{#1}}
+
+%%%%%%Vector Spaces%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\rtwo}{\mathbb{R}^2}
+\newcommand{\mxn}{{mxn}}
+
+%%%%%%Sets and common phrases%%%%%%%%%
+\newcommand{\Axb}{\textbf{Ax=b} }
+\newcommand{\Axz}{\textbf{Ax=0} }
+\newcommand{\dim}{\text{dim}}
+\newcommand{\lc}{linear combination }
+\newcommand{\let}{\text{Let }}
+\newcommand{\tf}{\therefore}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\everymath={\displaystyle}
+
+
+\begin{document}
+\maketitle
+
+
+\sect{SVD part 2}
+The best way to find the rank of a matrix is by computing the number of singular values in the sigma matrix of the singular value decomposition. \\
+we can orthogonally diagonalize $AA^T$ or $A^TA$ and work with which ever is smaller to find the singular values. \\\\
+Let A be an mxn matix and $\{v_1,...,v_n\}$ be orthonormal vectors of $A^TA$ corresponding to $\lambda_1,..,\lambda_n$ ordered such that $\lambda_1\geq \lambda_2\geq...\geq \lambda+n$ If A has r non zero singular values.Then :
+\[
+  \{Av_1,Av_2,...,Av_r\}
+\]
+is an orthogonal basis for the row space for the columns space of A and rank A is equal to r. \\
+\[
+  \{\frac{Av_1}{\sigma_1},...,\frac{Av_r}{\sigma_r}\}
+\]
+Forms an orthogonormal basis of ColA. \\
+ColA will have dim r nul $A^T$ will have dim m-r\\
+Orthonormal basis for $NulA^T$ Gives : $\{u_{r+1},...,u_m$\\
+\sect{The four fundemental subspaces}\\
+The U matrix in SVD :
+\[
+  U=[U_r U_{m-r}]\quad U_r=[u_1,...,u_r]\quad U_{m-r}=[u_{r+1},...,u_m]
+\]
+$U_r$ is an orthogonormal basis for ColA\\
+$U_{m-r}$ is an orthonormal basis for Nul$A^T$\\
+\[
+  V=[V_r V_n-r]\quad V_R=[v_1,..,v_r]\quad V[v_{r+1},...,v_n]
+\]
+$V_r$ is an orthonormal basis for Rowspace of A\\
+$V_{n-r}$ is an orthonormal basis for NulA
+\end{document}
