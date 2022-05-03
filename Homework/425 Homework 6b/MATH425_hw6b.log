@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  30 APR 2022 13:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.8.21)  2 MAY 2022 20:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -215,119 +215,96 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+./MATH425_hw6b.tex:47: You can't use `macro parameter character #' in horizonta
+l mode.
+l.47   Find the singular values of #
+                                    \begin{bmatrix}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
-./MATH425_hw6b.tex:48: LaTeX Error: \begin{document} ended by \end{proof}.
+./MATH425_hw6b.tex:47: Missing $ inserted.
+<inserted text> 
+                $
+l.47 ...nd the singular values of #\begin{bmatrix}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./MATH425_hw6b.tex:49: Missing $ inserted.
+<inserted text> 
+                $
+l.49 \end{bmatrix}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--52
+
+ []
+
+
+./MATH425_hw6b.tex:62: LaTeX Error: \begin{document} ended by \end{proof}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.48 \end{proof}
+l.62 \end{proof}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./MATH425_hw6b.tex:50: LaTeX Error: Environment proof undefined.
+./MATH425_hw6b.tex:64: LaTeX Error: Environment proof undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.50 \begin{proof}
+l.64 \begin{proof}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+./MATH425_hw6b.tex:67: You can't use `macro parameter character #' in math mode
+.
+l.67 ...or NulA is equivilant to the $v_{r+1}=v_n#
+                                                  $ columns of V. In this ca...
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
-./MATH425_hw6b.tex:52: LaTeX Error: \begin{document} ended by \end{proof}.
+
+./MATH425_hw6b.tex:69: LaTeX Error: \begin{document} ended by \end{proof}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.52 \end{proof}
+l.69 \end{proof}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./MATH425_hw6b.tex:54: LaTeX Error: Environment proof undefined.
+./MATH425_hw6b.tex:71: LaTeX Error: Environment proof undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.54 \begin{proof}
+l.71 \begin{proof}
                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./MATH425_hw6b.tex:56: LaTeX Error: \begin{document} ended by \end{proof}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.56 \end{proof}
-                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./MATH425_hw6b.tex:58: LaTeX Error: Environment proof undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.58 \begin{proof}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./MATH425_hw6b.tex:60: LaTeX Error: \begin{document} ended by \end{proof}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.60 \end{proof}
-                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./MATH425_hw6b.tex:62: LaTeX Error: Environment proof undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62 \begin{proof}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-./MATH425_hw6b.tex:64: LaTeX Error: \begin{document} ended by \end{proof}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.64 \end{proof}
-                
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -335,22 +312,197 @@ or  <return>  to continue without it.
 [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./MATH425_hw6b.aux) ) 
+
+./MATH425_hw6b.tex:83: LaTeX Error: \begin{document} ended by \end{proof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \end{proof}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./MATH425_hw6b.tex:85: LaTeX Error: Environment proof undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \begin{proof}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--93
+
+ []
+
+./MATH425_hw6b.tex:117: Missing $ inserted.
+<inserted text> 
+                $
+l.117 \blacksquare
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+./MATH425_hw6b.tex:118: LaTeX Error: \begin{document} ended by \end{proof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 \end{proof}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./MATH425_hw6b.tex:118: Missing $ inserted.
+<inserted text> 
+                $
+l.118 \end{proof}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+[2]
+
+./MATH425_hw6b.tex:120: LaTeX Error: Environment proof undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 \begin{proof}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--123
+
+ []
+
+./MATH425_hw6b.tex:152: Missing $ inserted.
+<inserted text> 
+                $
+l.152 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./MATH425_hw6b.tex:152: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.152 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./MATH425_hw6b.tex:153: Missing $ inserted.
+<inserted text> 
+                $
+l.153     U=\begin{bmatrix}
+                           
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./MATH425_hw6b.tex:158: Missing $ inserted.
+<inserted text> 
+                $
+l.158   \end{bmatrix}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+./MATH425_hw6b.tex:159: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.159   \]
+          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./MATH425_hw6b.tex:159: Missing $ inserted.
+<inserted text> 
+                $
+l.159   \]
+          
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./MATH425_hw6b.tex:159: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.159   \]
+          
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+[3] [4]
+
+./MATH425_hw6b.tex:241: LaTeX Error: \begin{document} ended by \end{proof}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.241 \end{proof}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[5] (./MATH425_hw6b.aux) ) 
 Here is how much of TeX's memory you used:
- 2359 strings out of 478542
- 31234 string characters out of 5854402
- 324313 words of memory out of 5000000
- 20308 multiletter control sequences out of 15000+600000
- 407232 words of font info for 42 fonts, out of 8000000 for 9000
+ 2387 strings out of 478542
+ 31541 string characters out of 5854402
+ 351313 words of memory out of 5000000
+ 20328 multiletter control sequences out of 15000+600000
+ 412223 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,66p,228b,211s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
-fb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on MATH425_hw6b.pdf (1 page, 34211 bytes).
+ 57i,12n,66p,368b,211s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/
+cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texliv
+e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c
+:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/
+2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2021/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1200.pfb>
+Output written on MATH425_hw6b.pdf (5 pages, 148691 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 96 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
